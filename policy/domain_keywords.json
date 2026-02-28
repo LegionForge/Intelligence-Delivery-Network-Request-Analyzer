@@ -1,0 +1,1094 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "description": "Domain classification keyword taxonomy for IDN Request Analyzer",
+    "tier_bias_explanation": "tier_bias indicates the minimum recommended tier for this domain regardless of complexity score"
+  },
+  "coding": {
+    "tier_bias": "L1",
+    "weight": 1.0,
+    "keywords": [
+      {
+        "word": "refactor",
+        "weight": 1.0
+      },
+      {
+        "word": "function",
+        "weight": 0.6
+      },
+      {
+        "word": "class",
+        "weight": 0.6
+      },
+      {
+        "word": "method",
+        "weight": 0.6
+      },
+      {
+        "word": "bug",
+        "weight": 0.8
+      },
+      {
+        "word": "debug",
+        "weight": 0.9
+      },
+      {
+        "word": "compile",
+        "weight": 1.0
+      },
+      {
+        "word": "syntax",
+        "weight": 0.9
+      },
+      {
+        "word": "algorithm",
+        "weight": 1.0
+      },
+      {
+        "word": "repository",
+        "weight": 0.8
+      },
+      {
+        "word": "deploy",
+        "weight": 0.9
+      },
+      {
+        "word": "api",
+        "weight": 0.7
+      },
+      {
+        "word": "endpoint",
+        "weight": 0.8
+      },
+      {
+        "word": "database",
+        "weight": 0.8
+      },
+      {
+        "word": "schema",
+        "weight": 0.8
+      },
+      {
+        "word": "query",
+        "weight": 0.7
+      },
+      {
+        "word": "unit test",
+        "weight": 1.0
+      },
+      {
+        "word": "integration test",
+        "weight": 1.0
+      },
+      {
+        "word": "pull request",
+        "weight": 0.9
+      },
+      {
+        "word": "git",
+        "weight": 0.7
+      },
+      {
+        "word": "docker",
+        "weight": 0.9
+      },
+      {
+        "word": "kubernetes",
+        "weight": 1.0
+      },
+      {
+        "word": "microservice",
+        "weight": 1.0
+      },
+      {
+        "word": "architecture",
+        "weight": 0.8
+      },
+      {
+        "word": "scalability",
+        "weight": 1.0
+      },
+      {
+        "word": "performance",
+        "weight": 0.7
+      },
+      {
+        "word": "latency",
+        "weight": 0.8
+      },
+      {
+        "word": "throughput",
+        "weight": 0.9
+      },
+      {
+        "word": "async",
+        "weight": 0.8
+      },
+      {
+        "word": "concurrency",
+        "weight": 1.0
+      },
+      {
+        "word": "thread",
+        "weight": 0.8
+      },
+      {
+        "word": "memory leak",
+        "weight": 1.0
+      },
+      {
+        "word": "stack overflow",
+        "weight": 1.0
+      },
+      {
+        "word": "null pointer",
+        "weight": 0.9
+      },
+      {
+        "word": "exception",
+        "weight": 0.7
+      },
+      {
+        "word": "runtime error",
+        "weight": 0.9
+      },
+      {
+        "word": "import",
+        "weight": 0.5
+      },
+      {
+        "word": "library",
+        "weight": 0.6
+      },
+      {
+        "word": "framework",
+        "weight": 0.7
+      },
+      {
+        "word": "python",
+        "weight": 0.8
+      },
+      {
+        "word": "javascript",
+        "weight": 0.8
+      },
+      {
+        "word": "typescript",
+        "weight": 0.9
+      },
+      {
+        "word": "rust",
+        "weight": 0.9
+      },
+      {
+        "word": "golang",
+        "weight": 0.9
+      },
+      {
+        "word": "java",
+        "weight": 0.7
+      },
+      {
+        "word": "c++",
+        "weight": 0.9
+      },
+      {
+        "word": "llm",
+        "weight": 0.8
+      },
+      {
+        "word": "model",
+        "weight": 0.5
+      },
+      {
+        "word": "inference",
+        "weight": 0.9
+      },
+      {
+        "word": "embedding",
+        "weight": 0.9
+      }
+    ],
+    "patterns": [
+      "\\b(def|class|import|return|async|await|yield)\\b",
+      "\\b(function|const|let|var|=>|interface|type)\\b",
+      "\\b(fn|impl|struct|enum|trait|pub|mod)\\b",
+      "\\b(SELECT|INSERT|UPDATE|DELETE|FROM|WHERE|JOIN)\\b",
+      "O\\([a-zA-Z0-9 ]+\\)",
+      "\\b\\w+\\(\\w*\\)\\s*[{;]",
+      "https?://[^\\s]+",
+      "\\b[A-Z][a-zA-Z]+Error\\b",
+      "\\b\\d+\\.\\d+\\.\\d+\\b"
+    ]
+  },
+  "research": {
+    "tier_bias": "L2",
+    "weight": 1.0,
+    "keywords": [
+      {
+        "word": "analyze",
+        "weight": 0.8
+      },
+      {
+        "word": "analysis",
+        "weight": 0.8
+      },
+      {
+        "word": "study",
+        "weight": 0.7
+      },
+      {
+        "word": "compare",
+        "weight": 0.7
+      },
+      {
+        "word": "comparison",
+        "weight": 0.8
+      },
+      {
+        "word": "summarize",
+        "weight": 0.7
+      },
+      {
+        "word": "summary",
+        "weight": 0.6
+      },
+      {
+        "word": "literature",
+        "weight": 1.0
+      },
+      {
+        "word": "evidence",
+        "weight": 0.9
+      },
+      {
+        "word": "findings",
+        "weight": 0.9
+      },
+      {
+        "word": "cite",
+        "weight": 0.9
+      },
+      {
+        "word": "citation",
+        "weight": 0.9
+      },
+      {
+        "word": "paper",
+        "weight": 0.7
+      },
+      {
+        "word": "research",
+        "weight": 0.8
+      },
+      {
+        "word": "hypothesis",
+        "weight": 1.0
+      },
+      {
+        "word": "methodology",
+        "weight": 1.0
+      },
+      {
+        "word": "dataset",
+        "weight": 0.9
+      },
+      {
+        "word": "statistics",
+        "weight": 0.9
+      },
+      {
+        "word": "correlation",
+        "weight": 1.0
+      },
+      {
+        "word": "peer review",
+        "weight": 1.0
+      },
+      {
+        "word": "meta-analysis",
+        "weight": 1.0
+      },
+      {
+        "word": "systematic review",
+        "weight": 1.0
+      },
+      {
+        "word": "survey",
+        "weight": 0.7
+      },
+      {
+        "word": "report",
+        "weight": 0.6
+      },
+      {
+        "word": "evaluate",
+        "weight": 0.7
+      },
+      {
+        "word": "benchmark",
+        "weight": 0.8
+      },
+      {
+        "word": "experiment",
+        "weight": 0.9
+      },
+      {
+        "word": "findings",
+        "weight": 0.8
+      },
+      {
+        "word": "implications",
+        "weight": 0.8
+      },
+      {
+        "word": "conclusions",
+        "weight": 0.7
+      }
+    ],
+    "patterns": [
+      "et al\\.?",
+      "\\(\\d{4}\\)",
+      "\\b(figure|table|appendix)\\s+\\d+\\b",
+      "p\\s*[<=>]\\s*0\\.0\\d+"
+    ]
+  },
+  "legal": {
+    "tier_bias": "L3",
+    "weight": 1.2,
+    "keywords": [
+      {
+        "word": "contract",
+        "weight": 1.0
+      },
+      {
+        "word": "clause",
+        "weight": 1.0
+      },
+      {
+        "word": "liability",
+        "weight": 1.0
+      },
+      {
+        "word": "compliance",
+        "weight": 1.0
+      },
+      {
+        "word": "statute",
+        "weight": 1.0
+      },
+      {
+        "word": "regulation",
+        "weight": 0.9
+      },
+      {
+        "word": "attorney",
+        "weight": 1.0
+      },
+      {
+        "word": "counsel",
+        "weight": 0.8
+      },
+      {
+        "word": "litigation",
+        "weight": 1.0
+      },
+      {
+        "word": "lawsuit",
+        "weight": 1.0
+      },
+      {
+        "word": "plaintiff",
+        "weight": 1.0
+      },
+      {
+        "word": "defendant",
+        "weight": 1.0
+      },
+      {
+        "word": "jurisdiction",
+        "weight": 1.0
+      },
+      {
+        "word": "precedent",
+        "weight": 1.0
+      },
+      {
+        "word": "indemnification",
+        "weight": 1.0
+      },
+      {
+        "word": "arbitration",
+        "weight": 1.0
+      },
+      {
+        "word": "nda",
+        "weight": 1.0
+      },
+      {
+        "word": "non-disclosure",
+        "weight": 1.0
+      },
+      {
+        "word": "intellectual property",
+        "weight": 1.0
+      },
+      {
+        "word": "copyright",
+        "weight": 0.9
+      },
+      {
+        "word": "trademark",
+        "weight": 0.9
+      },
+      {
+        "word": "patent",
+        "weight": 0.9
+      },
+      {
+        "word": "gdpr",
+        "weight": 1.0
+      },
+      {
+        "word": "hipaa",
+        "weight": 1.0
+      },
+      {
+        "word": "pci",
+        "weight": 0.9
+      },
+      {
+        "word": "terms of service",
+        "weight": 1.0
+      },
+      {
+        "word": "privacy policy",
+        "weight": 0.9
+      },
+      {
+        "word": "force majeure",
+        "weight": 1.0
+      },
+      {
+        "word": "warranty",
+        "weight": 0.8
+      },
+      {
+        "word": "breach",
+        "weight": 0.9
+      },
+      {
+        "word": "damages",
+        "weight": 0.9
+      },
+      {
+        "word": "injunction",
+        "weight": 1.0
+      },
+      {
+        "word": "deposition",
+        "weight": 1.0
+      },
+      {
+        "word": "subpoena",
+        "weight": 1.0
+      }
+    ],
+    "patterns": [
+      "\u00a7\\s*\\d+",
+      "\\b\\d+\\s+U\\.S\\.C\\.\\s+\u00a7",
+      "\\bCFR\\s+\\d+\\b",
+      "\\bhereinafter\\b",
+      "\\bwhereas\\b",
+      "\\bthereof\\b",
+      "\\bhereby\\b"
+    ]
+  },
+  "health": {
+    "tier_bias": "L2",
+    "weight": 1.2,
+    "keywords": [
+      {
+        "word": "patient",
+        "weight": 1.0
+      },
+      {
+        "word": "diagnosis",
+        "weight": 1.0
+      },
+      {
+        "word": "symptom",
+        "weight": 1.0
+      },
+      {
+        "word": "symptoms",
+        "weight": 1.0
+      },
+      {
+        "word": "medication",
+        "weight": 1.0
+      },
+      {
+        "word": "prescription",
+        "weight": 1.0
+      },
+      {
+        "word": "dosage",
+        "weight": 1.0
+      },
+      {
+        "word": "clinical",
+        "weight": 1.0
+      },
+      {
+        "word": "medical",
+        "weight": 0.9
+      },
+      {
+        "word": "treatment",
+        "weight": 0.9
+      },
+      {
+        "word": "therapy",
+        "weight": 0.9
+      },
+      {
+        "word": "surgery",
+        "weight": 1.0
+      },
+      {
+        "word": "hospital",
+        "weight": 0.8
+      },
+      {
+        "word": "physician",
+        "weight": 1.0
+      },
+      {
+        "word": "doctor",
+        "weight": 0.8
+      },
+      {
+        "word": "nurse",
+        "weight": 0.7
+      },
+      {
+        "word": "blood pressure",
+        "weight": 1.0
+      },
+      {
+        "word": "heart rate",
+        "weight": 1.0
+      },
+      {
+        "word": "glucose",
+        "weight": 1.0
+      },
+      {
+        "word": "insulin",
+        "weight": 1.0
+      },
+      {
+        "word": "chronic",
+        "weight": 0.9
+      },
+      {
+        "word": "acute",
+        "weight": 0.8
+      },
+      {
+        "word": "prognosis",
+        "weight": 1.0
+      },
+      {
+        "word": "radiology",
+        "weight": 1.0
+      },
+      {
+        "word": "pathology",
+        "weight": 1.0
+      },
+      {
+        "word": "oncology",
+        "weight": 1.0
+      },
+      {
+        "word": "pharmacy",
+        "weight": 0.9
+      },
+      {
+        "word": "vaccine",
+        "weight": 0.8
+      },
+      {
+        "word": "allergy",
+        "weight": 0.8
+      },
+      {
+        "word": "icd",
+        "weight": 1.0
+      },
+      {
+        "word": "cpt code",
+        "weight": 1.0
+      },
+      {
+        "word": "ehr",
+        "weight": 1.0
+      },
+      {
+        "word": "emr",
+        "weight": 1.0
+      },
+      {
+        "word": "lab result",
+        "weight": 1.0
+      },
+      {
+        "word": "biopsy",
+        "weight": 1.0
+      }
+    ],
+    "patterns": [
+      "\\b\\d+\\s*mg\\b",
+      "\\b\\d+\\s*ml\\b",
+      "\\b\\d+/\\d+\\s*mmhg\\b",
+      "\\bICD-\\d+\\b",
+      "\\bCPT\\s*\\d+\\b",
+      "\\b[A-Z]\\d+(\\.\\d+)?\\b"
+    ]
+  },
+  "finance": {
+    "tier_bias": "L2",
+    "weight": 1.0,
+    "keywords": [
+      {
+        "word": "portfolio",
+        "weight": 1.0
+      },
+      {
+        "word": "revenue",
+        "weight": 0.9
+      },
+      {
+        "word": "roi",
+        "weight": 1.0
+      },
+      {
+        "word": "tax",
+        "weight": 0.8
+      },
+      {
+        "word": "invoice",
+        "weight": 0.9
+      },
+      {
+        "word": "balance sheet",
+        "weight": 1.0
+      },
+      {
+        "word": "investment",
+        "weight": 0.9
+      },
+      {
+        "word": "equity",
+        "weight": 0.9
+      },
+      {
+        "word": "stock",
+        "weight": 0.8
+      },
+      {
+        "word": "bond",
+        "weight": 0.8
+      },
+      {
+        "word": "dividend",
+        "weight": 1.0
+      },
+      {
+        "word": "valuation",
+        "weight": 1.0
+      },
+      {
+        "word": "cash flow",
+        "weight": 1.0
+      },
+      {
+        "word": "ebitda",
+        "weight": 1.0
+      },
+      {
+        "word": "p&l",
+        "weight": 1.0
+      },
+      {
+        "word": "profit",
+        "weight": 0.8
+      },
+      {
+        "word": "loss",
+        "weight": 0.6
+      },
+      {
+        "word": "budget",
+        "weight": 0.7
+      },
+      {
+        "word": "forecast",
+        "weight": 0.8
+      },
+      {
+        "word": "audit",
+        "weight": 0.9
+      },
+      {
+        "word": "payroll",
+        "weight": 0.9
+      },
+      {
+        "word": "amortization",
+        "weight": 1.0
+      },
+      {
+        "word": "depreciation",
+        "weight": 1.0
+      },
+      {
+        "word": "liquidity",
+        "weight": 1.0
+      },
+      {
+        "word": "hedge",
+        "weight": 1.0
+      },
+      {
+        "word": "derivative",
+        "weight": 1.0
+      },
+      {
+        "word": "sec",
+        "weight": 0.8
+      },
+      {
+        "word": "ipo",
+        "weight": 1.0
+      },
+      {
+        "word": "market cap",
+        "weight": 1.0
+      },
+      {
+        "word": "earnings",
+        "weight": 0.9
+      }
+    ],
+    "patterns": [
+      "\\$[\\d,]+(\\.\\d{2})?",
+      "\\b\\d+(\\.\\d+)?%\\b",
+      "\\bQ[1-4]\\s+20\\d{2}\\b",
+      "\\bFY\\s*20\\d{2}\\b",
+      "\\b(GAAP|IFRS)\\b"
+    ]
+  },
+  "creative": {
+    "tier_bias": "L1",
+    "weight": 0.9,
+    "keywords": [
+      {
+        "word": "write",
+        "weight": 0.6
+      },
+      {
+        "word": "story",
+        "weight": 0.8
+      },
+      {
+        "word": "poem",
+        "weight": 1.0
+      },
+      {
+        "word": "poetry",
+        "weight": 1.0
+      },
+      {
+        "word": "screenplay",
+        "weight": 1.0
+      },
+      {
+        "word": "script",
+        "weight": 0.7
+      },
+      {
+        "word": "novel",
+        "weight": 1.0
+      },
+      {
+        "word": "fiction",
+        "weight": 1.0
+      },
+      {
+        "word": "character",
+        "weight": 0.7
+      },
+      {
+        "word": "plot",
+        "weight": 0.9
+      },
+      {
+        "word": "narrative",
+        "weight": 0.9
+      },
+      {
+        "word": "dialogue",
+        "weight": 0.9
+      },
+      {
+        "word": "brainstorm",
+        "weight": 0.8
+      },
+      {
+        "word": "generate",
+        "weight": 0.6
+      },
+      {
+        "word": "imagine",
+        "weight": 0.8
+      },
+      {
+        "word": "creative",
+        "weight": 0.8
+      },
+      {
+        "word": "metaphor",
+        "weight": 0.9
+      },
+      {
+        "word": "rhyme",
+        "weight": 1.0
+      },
+      {
+        "word": "blog post",
+        "weight": 0.8
+      },
+      {
+        "word": "essay",
+        "weight": 0.8
+      },
+      {
+        "word": "headline",
+        "weight": 0.7
+      },
+      {
+        "word": "tagline",
+        "weight": 0.9
+      },
+      {
+        "word": "copywriting",
+        "weight": 1.0
+      },
+      {
+        "word": "slogan",
+        "weight": 0.9
+      }
+    ],
+    "patterns": []
+  },
+  "agentic": {
+    "tier_bias": "L2",
+    "weight": 1.0,
+    "keywords": [
+      {
+        "word": "schedule",
+        "weight": 0.9
+      },
+      {
+        "word": "book",
+        "weight": 0.7
+      },
+      {
+        "word": "send",
+        "weight": 0.7
+      },
+      {
+        "word": "automate",
+        "weight": 1.0
+      },
+      {
+        "word": "run",
+        "weight": 0.5
+      },
+      {
+        "word": "execute",
+        "weight": 0.9
+      },
+      {
+        "word": "manage",
+        "weight": 0.7
+      },
+      {
+        "word": "workflow",
+        "weight": 1.0
+      },
+      {
+        "word": "pipeline",
+        "weight": 0.9
+      },
+      {
+        "word": "trigger",
+        "weight": 0.8
+      },
+      {
+        "word": "monitor",
+        "weight": 0.8
+      },
+      {
+        "word": "alert",
+        "weight": 0.7
+      },
+      {
+        "word": "notification",
+        "weight": 0.7
+      },
+      {
+        "word": "calendar",
+        "weight": 0.8
+      },
+      {
+        "word": "email",
+        "weight": 0.6
+      },
+      {
+        "word": "slack",
+        "weight": 0.8
+      },
+      {
+        "word": "webhook",
+        "weight": 1.0
+      },
+      {
+        "word": "cron",
+        "weight": 1.0
+      },
+      {
+        "word": "integration",
+        "weight": 0.8
+      },
+      {
+        "word": "search the web",
+        "weight": 1.0
+      },
+      {
+        "word": "browse",
+        "weight": 0.7
+      },
+      {
+        "word": "download",
+        "weight": 0.7
+      },
+      {
+        "word": "upload",
+        "weight": 0.7
+      },
+      {
+        "word": "scrape",
+        "weight": 1.0
+      },
+      {
+        "word": "fetch",
+        "weight": 0.6
+      },
+      {
+        "word": "tool",
+        "weight": 0.6
+      },
+      {
+        "word": "agent",
+        "weight": 0.9
+      },
+      {
+        "word": "autonomous",
+        "weight": 1.0
+      },
+      {
+        "word": "for each",
+        "weight": 0.8
+      },
+      {
+        "word": "for all",
+        "weight": 0.7
+      },
+      {
+        "word": "batch",
+        "weight": 0.8
+      },
+      {
+        "word": "iterate",
+        "weight": 0.8
+      }
+    ],
+    "patterns": [
+      "\\bfor (each|every|all)\\b",
+      "\\b(then|after that|next|finally)\\b.*\\b(then|after that|next|finally)\\b"
+    ]
+  },
+  "general": {
+    "tier_bias": "L0",
+    "weight": 0.5,
+    "keywords": [
+      {
+        "word": "what is",
+        "weight": 0.3
+      },
+      {
+        "word": "who is",
+        "weight": 0.3
+      },
+      {
+        "word": "when is",
+        "weight": 0.3
+      },
+      {
+        "word": "where is",
+        "weight": 0.3
+      },
+      {
+        "word": "how do i",
+        "weight": 0.4
+      },
+      {
+        "word": "tell me",
+        "weight": 0.3
+      },
+      {
+        "word": "explain",
+        "weight": 0.5
+      },
+      {
+        "word": "define",
+        "weight": 0.4
+      },
+      {
+        "word": "translate",
+        "weight": 0.5
+      },
+      {
+        "word": "hello",
+        "weight": 0.1
+      },
+      {
+        "word": "hi",
+        "weight": 0.1
+      },
+      {
+        "word": "thanks",
+        "weight": 0.1
+      },
+      {
+        "word": "thank you",
+        "weight": 0.1
+      }
+    ],
+    "patterns": []
+  }
+}

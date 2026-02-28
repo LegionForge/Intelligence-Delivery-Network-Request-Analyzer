@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "description": "PII detection patterns for IDN Request Analyzer",
+    "note": "All patterns are case-insensitive. Matching ANY pattern sets pii_risk to the class level."
+  },
+  "classes": {
+    "email": {
+      "risk_level": "medium",
+      "compliance": [
+        "GDPR"
+      ],
+      "patterns": [
+        "[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}"
+      ]
+    },
+    "phone": {
+      "risk_level": "medium",
+      "compliance": [
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b(\\+?1[-.]?)?\\(?\\d{3}\\)?[-.]?\\d{3}[-.]?\\d{4}\\b",
+        "\\b\\d{3}[-.\\s]\\d{3}[-.\\s]\\d{4}\\b"
+      ]
+    },
+    "ssn": {
+      "risk_level": "high",
+      "compliance": [
+        "HIPAA",
+        "GDPR",
+        "PCI"
+      ],
+      "patterns": [
+        "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+        "\\b\\d{9}\\b"
+      ]
+    },
+    "credit_card": {
+      "risk_level": "critical",
+      "compliance": [
+        "PCI"
+      ],
+      "patterns": [
+        "\\b4[0-9]{12}(?:[0-9]{3})?\\b",
+        "\\b5[1-5][0-9]{14}\\b",
+        "\\b3[47][0-9]{13}\\b",
+        "\\b(?:\\d{4}[- ]){3}\\d{4}\\b"
+      ]
+    },
+    "dob": {
+      "risk_level": "high",
+      "compliance": [
+        "HIPAA",
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b(0?[1-9]|1[0-2])[-/](0?[1-9]|[12]\\d|3[01])[-/](19|20)\\d{2}\\b",
+        "\\b(19|20)\\d{2}[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12]\\d|3[01])\\b",
+        "\\b(dob|date of birth|born on|born)\\s*:?\\s*[\\d/\\-]+",
+        "\\b(january|february|march|april|may|june|july|august|september|october|november|december)\\s+\\d{1,2},?\\s+\\d{4}\\b"
+      ]
+    },
+    "name_with_context": {
+      "risk_level": "medium",
+      "compliance": [
+        "HIPAA",
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b(patient|client|user|employee|mr|mrs|ms|dr)\\.?\\s+[A-Z][a-z]+\\s+[A-Z][a-z]+\\b",
+        "\\bmy name is\\s+[A-Z][a-z]+\\b",
+        "\\b(name|full name)\\s*:?\\s*[A-Z][a-z]+\\s+[A-Z][a-z]+"
+      ]
+    },
+    "medical": {
+      "risk_level": "critical",
+      "compliance": [
+        "HIPAA"
+      ],
+      "patterns": [
+        "\\b(diagnosis|diagnosed with|prescribed|prescription|medication|dosage|symptoms|blood pressure|heart rate|glucose|weight|height)\\s*:?\\s*[\\w\\s,]+",
+        "\\b\\d+\\s*(mg|ml|mcg|units?)\\b",
+        "\\b\\d+/\\d+\\s*mmhg\\b",
+        "\\b(icd|cpt)[-\\s]?\\d+\\b"
+      ]
+    },
+    "financial": {
+      "risk_level": "critical",
+      "compliance": [
+        "PCI",
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b[0-9]{8,17}\\b(?=.*\\b(account|routing|iban|swift|bank)\\b)",
+        "\\b(account number|routing number|iban|swift code)\\s*:?\\s*[\\d\\w]+",
+        "\\b[A-Z]{2}\\d{2}[A-Z0-9]{4}\\d{7}([A-Z0-9]?){0,16}\\b"
+      ]
+    },
+    "location": {
+      "risk_level": "low",
+      "compliance": [
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b\\d{5}(-\\d{4})?\\b(?=.*\\b(zip|zipcode|postal)\\b)",
+        "\\b(address|street|avenue|blvd|lane|drive|road)\\s*:?\\s*\\d+\\s+[\\w\\s]+",
+        "\\b(lives at|located at|address is)\\s+[\\d\\w\\s,]+"
+      ]
+    },
+    "ip_address": {
+      "risk_level": "low",
+      "compliance": [
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b",
+        "\\b([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}\\b"
+      ]
+    }
+  }
+}

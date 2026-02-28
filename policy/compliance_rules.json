@@ -1,0 +1,142 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "description": "Compliance framework rules \u2014 matching triggers forced L0 or egress block"
+  },
+  "frameworks": {
+    "HIPAA": {
+      "description": "Health Insurance Portability and Accountability Act (US)",
+      "force_L0": true,
+      "block_egress": true,
+      "trigger_keywords": [
+        "patient",
+        "medical record",
+        "health information",
+        "phi",
+        "protected health",
+        "diagnosis",
+        "treatment",
+        "prescription",
+        "physician",
+        "doctor",
+        "nurse",
+        "clinical",
+        "hipaa",
+        "ehr",
+        "emr",
+        "lab result",
+        "radiology",
+        "pharmacy"
+      ],
+      "trigger_pii_classes": [
+        "medical",
+        "ssn",
+        "dob",
+        "name_with_context"
+      ],
+      "severity": "critical"
+    },
+    "GDPR": {
+      "description": "General Data Protection Regulation (EU)",
+      "force_L0": true,
+      "block_egress": false,
+      "require_consent_check": true,
+      "trigger_keywords": [
+        "personal data",
+        "data subject",
+        "gdpr",
+        "right to erasure",
+        "right to be forgotten",
+        "data controller",
+        "data processor",
+        "consent",
+        "legitimate interest",
+        "data breach",
+        "dpa",
+        "supervisory authority",
+        "article 17",
+        "article 6"
+      ],
+      "trigger_pii_classes": [
+        "email",
+        "phone",
+        "ssn",
+        "dob",
+        "name_with_context",
+        "location",
+        "ip_address"
+      ],
+      "severity": "high"
+    },
+    "PCI_DSS": {
+      "description": "Payment Card Industry Data Security Standard",
+      "force_L0": true,
+      "block_egress": true,
+      "trigger_keywords": [
+        "credit card",
+        "card number",
+        "cvv",
+        "cvc",
+        "expiration date",
+        "cardholder",
+        "payment card",
+        "pci",
+        "pci dss",
+        "pan",
+        "primary account number",
+        "magnetic stripe",
+        "chip and pin"
+      ],
+      "trigger_pii_classes": [
+        "credit_card",
+        "financial"
+      ],
+      "severity": "critical"
+    },
+    "ATTORNEY_CLIENT": {
+      "description": "Attorney-client privilege protection",
+      "force_L0": false,
+      "block_egress": false,
+      "require_user_confirmation": true,
+      "trigger_keywords": [
+        "attorney-client",
+        "privileged",
+        "legal advice",
+        "my lawyer",
+        "my attorney",
+        "counsel advised",
+        "confidential legal",
+        "work product",
+        "litigation hold"
+      ],
+      "trigger_pii_classes": [],
+      "severity": "high"
+    },
+    "FERPA": {
+      "description": "Family Educational Rights and Privacy Act (US)",
+      "force_L0": true,
+      "block_egress": true,
+      "trigger_keywords": [
+        "student record",
+        "education record",
+        "ferpa",
+        "transcript",
+        "gpa",
+        "enrollment",
+        "student id",
+        "grade",
+        "disciplinary record"
+      ],
+      "trigger_pii_classes": [
+        "name_with_context"
+      ],
+      "severity": "high"
+    }
+  },
+  "global_rules": {
+    "any_critical_pii_blocks_egress": true,
+    "compliance_flag_forces_layer3_analysis": true,
+    "offline_mode_forces_L0": true,
+    "unknown_compliance_default": "escalate"
+  }
+}
