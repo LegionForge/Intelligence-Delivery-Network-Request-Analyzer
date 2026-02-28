@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "description": "Tier routing thresholds and scoring rules for IDN Request Analyzer"
+  },
+  "tiers": {
+    "L0": {
+      "description": "On-device inference",
+      "complexity_max": 0.25,
+      "token_max": 200,
+      "reasoning_hops_max": 1,
+      "domains": [
+        "general"
+      ],
+      "force_conditions": [
+        "offline_mode",
+        "data_egress_blocked",
+        "compliance_flag"
+      ]
+    },
+    "L1": {
+      "description": "Edge inference",
+      "complexity_max": 0.45,
+      "token_max": 500,
+      "reasoning_hops_max": 2,
+      "domains": [
+        "general",
+        "creative",
+        "coding"
+      ]
+    },
+    "L2": {
+      "description": "Regional cloud inference",
+      "complexity_max": 0.72,
+      "token_max": 4000,
+      "reasoning_hops_max": 3,
+      "domains": [
+        "coding",
+        "research",
+        "finance",
+        "health",
+        "agentic",
+        "creative"
+      ]
+    },
+    "L3": {
+      "description": "Global frontier inference",
+      "complexity_min": 0.72,
+      "token_min": 4000,
+      "reasoning_hops_min": 4,
+      "domains": [
+        "legal",
+        "research",
+        "coding"
+      ]
+    }
+  },
+  "complexity_scoring": {
+    "base": 0.0,
+    "weights": {
+      "token_count_normalized": 0.25,
+      "verb_density": 0.2,
+      "question_count_normalized": 0.1,
+      "list_item_count_normalized": 0.1,
+      "domain_weight": 0.2,
+      "sentence_count_normalized": 0.15
+    },
+    "normalization": {
+      "token_count_max": 4000,
+      "verb_count_max": 20,
+      "question_count_max": 10,
+      "list_item_max": 20,
+      "sentence_count_max": 40
+    }
+  },
+  "confidence_scoring": {
+    "base": 1.0,
+    "penalties": {
+      "token_count_ambiguous_range": {
+        "min": 400,
+        "max": 600,
+        "penalty": -0.15
+      },
+      "multiple_domain_matches": {
+        "penalty_per_extra_domain": -0.2
+      },
+      "pii_detected": {
+        "penalty": -0.3
+      },
+      "quality_signals_with_uncertain_complexity": {
+        "complexity_uncertain_range": [
+          0.4,
+          0.55
+        ],
+        "penalty": -0.2
+      },
+      "high_question_count": {
+        "threshold": 3,
+        "penalty": -0.15
+      },
+      "high_list_count": {
+        "threshold": 5,
+        "penalty": -0.1
+      }
+    },
+    "escalation_threshold": 0.85,
+    "force_escalate_conditions": [
+      "compliance_flag",
+      "pii_critical"
+    ]
+  },
+  "reasoning_hop_estimation": {
+    "single_verb_simple": 0,
+    "single_verb_complex": 1,
+    "multi_step_keywords": {
+      "keywords": [
+        "then",
+        "after that",
+        "next",
+        "finally",
+        "first",
+        "second",
+        "third",
+        "step 1",
+        "step 2",
+        "also",
+        "additionally",
+        "furthermore"
+      ],
+      "hops_per_keyword": 0.5
+    },
+    "multi_task_keywords": {
+      "keywords": [
+        "and",
+        "as well as",
+        "in addition",
+        "plus",
+        "also"
+      ],
+      "hops_per_keyword": 0.3
+    }
+  }
+}
