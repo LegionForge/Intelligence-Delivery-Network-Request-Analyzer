@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Tier routing thresholds and scoring rules for IDN Request Analyzer"
   },
   "tiers": {
@@ -56,21 +56,38 @@
     }
   },
   "complexity_scoring": {
+    "version": "0.2.0",
     "base": 0.0,
     "weights": {
-      "token_count_normalized": 0.25,
-      "verb_density": 0.2,
+      "token_count_normalized": 0.2,
+      "verb_density": 0.25,
       "question_count_normalized": 0.1,
       "list_item_count_normalized": 0.1,
-      "domain_weight": 0.2,
-      "sentence_count_normalized": 0.15
+      "sentence_count_normalized": 0.1,
+      "domain_boost": 0.35
     },
     "normalization": {
-      "token_count_max": 4000,
-      "verb_count_max": 20,
-      "question_count_max": 10,
-      "list_item_max": 20,
-      "sentence_count_max": 40
+      "token_count_max": 200,
+      "verb_count_max": 10,
+      "question_count_max": 5,
+      "list_item_max": 10,
+      "sentence_count_max": 10,
+      "domain_boost_divisor": 3.0,
+      "domain_boost_max": 0.35
+    },
+    "domain_complexity_floors": {
+      "legal": 0.55,
+      "health": 0.4,
+      "finance": 0.46,
+      "research": 0.46,
+      "agentic": 0.46,
+      "coding": 0.28,
+      "coding_strong_match_threshold": 1.2,
+      "coding_strong_match_floor": 0.46,
+      "coding_high_match_threshold": 2.5,
+      "coding_high_match_floor": 0.55,
+      "creative": 0.2,
+      "general": 0.0
     }
   },
   "confidence_scoring": {
@@ -108,6 +125,77 @@
       "compliance_flag",
       "pii_critical"
     ]
+  },
+  "output_types": {
+    "text": "Prose, explanation, summary \u2014 default text response",
+    "code": "Source code, scripts, queries, shell commands",
+    "image": "Image generation request",
+    "svg": "Vector graphic / icon / logo",
+    "audio": "Music, speech, sound generation",
+    "video": "Video or animation generation",
+    "structured_data": "JSON, CSV, YAML, XML, tables, schemas",
+    "mixed": "Combination of multiple output modalities",
+    "model_decided": "Dealer's choice \u2014 model determines best output format"
+  },
+  "prompt_structure_signals": {
+    "is_multi_step": {
+      "description": "Prompt contains chained sequential instructions",
+      "min_keyword_hits": 2,
+      "keywords": [
+        "then",
+        "after that",
+        "finally",
+        "next",
+        "step 1",
+        "step 2",
+        "first",
+        "second",
+        "third",
+        "lastly",
+        "followed by"
+      ]
+    },
+    "is_numerical": {
+      "description": "Prompt requires calculation, estimation, or quantitative output",
+      "keywords": [
+        "calculate",
+        "compute",
+        "how much",
+        "how many",
+        "percentage",
+        "forecast",
+        "estimate",
+        "total",
+        "average",
+        "sum",
+        "rate",
+        "roi",
+        "ebitda",
+        "revenue",
+        "cost",
+        "budget",
+        "price"
+      ]
+    },
+    "is_conditional": {
+      "description": "Prompt contains if/then branching logic",
+      "keywords": [
+        "if ",
+        "unless",
+        "assuming",
+        "given that",
+        "in the case",
+        "when ",
+        "depending on",
+        "only if",
+        "otherwise",
+        "else"
+      ]
+    },
+    "is_multimodal": {
+      "description": "Prompt requests more than one output modality",
+      "detection": "modality_count > 1"
+    }
   },
   "reasoning_hop_estimation": {
     "single_verb_simple": 0,

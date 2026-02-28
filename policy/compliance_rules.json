@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Compliance framework rules \u2014 matching triggers forced L0 or egress block"
   },
   "frameworks": {
@@ -26,7 +26,24 @@
         "emr",
         "lab result",
         "radiology",
-        "pharmacy"
+        "pharmacy",
+        "mental health",
+        "therapy",
+        "counseling",
+        "psychiatry",
+        "psychology",
+        "anxiety",
+        "depression",
+        "ptsd",
+        "self-harm",
+        "suicidal",
+        "trauma",
+        "dosage",
+        "icd",
+        "cpt code",
+        "biopsy",
+        "prognosis",
+        "oncology"
       ],
       "trigger_pii_classes": [
         "medical",
@@ -129,6 +146,57 @@
       ],
       "trigger_pii_classes": [
         "name_with_context"
+      ],
+      "severity": "high"
+    },
+    "SEC": {
+      "description": "Securities and Exchange Commission disclosure rules",
+      "force_L0": false,
+      "block_egress": true,
+      "require_user_confirmation": true,
+      "trigger_keywords": [
+        "sec filing",
+        "material nonpublic",
+        "insider",
+        "10-k",
+        "10-q",
+        "8-k",
+        "proxy statement",
+        "form s-1",
+        "edgar",
+        "securities act",
+        "exchange act",
+        "reg fd",
+        "material information",
+        "earnings guidance"
+      ],
+      "trigger_pii_classes": [
+        "financial"
+      ],
+      "severity": "high"
+    },
+    "FDA": {
+      "description": "FDA regulatory submissions and clinical trial data",
+      "force_L0": false,
+      "block_egress": true,
+      "require_user_confirmation": true,
+      "trigger_keywords": [
+        "fda approval",
+        "clinical trial",
+        "510k",
+        "pma",
+        "drug approval",
+        "ind application",
+        "nda submission",
+        "biologics",
+        "adverse event",
+        "fda clearance",
+        "premarket",
+        "de novo",
+        "breakthrough designation"
+      ],
+      "trigger_pii_classes": [
+        "medical"
       ],
       "severity": "high"
     }

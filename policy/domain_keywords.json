@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Domain classification keyword taxonomy for IDN Request Analyzer",
     "tier_bias_explanation": "tier_bias indicates the minimum recommended tier for this domain regardless of complexity score"
   },
@@ -10,7 +10,7 @@
     "keywords": [
       {
         "word": "refactor",
-        "weight": 1.0
+        "weight": 0.9
       },
       {
         "word": "function",
@@ -74,7 +74,7 @@
       },
       {
         "word": "unit test",
-        "weight": 1.0
+        "weight": 0.8
       },
       {
         "word": "integration test",
@@ -98,15 +98,15 @@
       },
       {
         "word": "microservice",
-        "weight": 1.0
+        "weight": 0.9
       },
       {
         "word": "architecture",
-        "weight": 0.8
+        "weight": 0.7
       },
       {
         "word": "scalability",
-        "weight": 1.0
+        "weight": 0.9
       },
       {
         "word": "performance",
@@ -197,17 +197,101 @@
         "weight": 0.8
       },
       {
-        "word": "model",
-        "weight": 0.5
-      },
-      {
         "word": "inference",
         "weight": 0.9
       },
       {
         "word": "embedding",
         "weight": 0.9
+      },
+      {
+        "word": "distributed",
+        "weight": 0.8
+      },
+      {
+        "word": "streaming",
+        "weight": 0.8
+      },
+      {
+        "word": "fault-tolerant",
+        "weight": 1.0
+      },
+      {
+        "word": "replication",
+        "weight": 0.9
+      },
+      {
+        "word": "event",
+        "weight": 0.6
+      },
+      {
+        "word": "cybersecurity",
+        "weight": 1.0
+      },
+      {
+        "word": "encryption",
+        "weight": 0.9
+      },
+      {
+        "word": "vulnerability",
+        "weight": 1.0
+      },
+      {
+        "word": "penetration",
+        "weight": 1.0
+      },
+      {
+        "word": "zero-day",
+        "weight": 1.0
+      },
+      {
+        "word": "firewall",
+        "weight": 0.8
+      },
+      {
+        "word": "intrusion",
+        "weight": 0.9
+      },
+      {
+        "word": "soc 2",
+        "weight": 1.0
+      },
+      {
+        "word": "machine learning",
+        "weight": 0.9
+      },
+      {
+        "word": "neural network",
+        "weight": 0.9
+      },
+      {
+        "word": "data science",
+        "weight": 0.9
+      },
+      {
+        "word": "model training",
+        "weight": 1.0
+      },
+      {
+        "word": "feature engineering",
+        "weight": 1.0
+      },
+      {
+        "word": "gradient",
+        "weight": 0.8
+      },
+      {
+        "word": "data pipeline",
+        "weight": 0.9
+      },
+      {
+        "word": "etl",
+        "weight": 0.9
       }
+    ],
+    "subdomains": [
+      "cybersecurity",
+      "data_science"
     ],
     "patterns": [
       "\\b(def|class|import|return|async|await|yield)\\b",
@@ -334,16 +418,32 @@
         "weight": 0.9
       },
       {
-        "word": "findings",
-        "weight": 0.8
-      },
-      {
         "word": "implications",
         "weight": 0.8
       },
       {
         "word": "conclusions",
         "weight": 0.7
+      },
+      {
+        "word": "transformer",
+        "weight": 0.8
+      },
+      {
+        "word": "peer-reviewed",
+        "weight": 1.0
+      },
+      {
+        "word": "statistical",
+        "weight": 0.9
+      },
+      {
+        "word": "journal",
+        "weight": 0.8
+      },
+      {
+        "word": "clinical trial",
+        "weight": 1.0
       }
     ],
     "patterns": [
@@ -363,7 +463,7 @@
       },
       {
         "word": "clause",
-        "weight": 1.0
+        "weight": 0.9
       },
       {
         "word": "liability",
@@ -371,7 +471,7 @@
       },
       {
         "word": "compliance",
-        "weight": 1.0
+        "weight": 0.7
       },
       {
         "word": "statute",
@@ -446,18 +546,6 @@
         "weight": 0.9
       },
       {
-        "word": "gdpr",
-        "weight": 1.0
-      },
-      {
-        "word": "hipaa",
-        "weight": 1.0
-      },
-      {
-        "word": "pci",
-        "weight": 0.9
-      },
-      {
         "word": "terms of service",
         "weight": 1.0
       },
@@ -492,7 +580,43 @@
       {
         "word": "subpoena",
         "weight": 1.0
+      },
+      {
+        "word": "regulatory",
+        "weight": 0.9
+      },
+      {
+        "word": "sec",
+        "weight": 0.8
+      },
+      {
+        "word": "fda",
+        "weight": 0.8
+      },
+      {
+        "word": "osha",
+        "weight": 0.9
+      },
+      {
+        "word": "consent decree",
+        "weight": 1.0
+      },
+      {
+        "word": "tax law",
+        "weight": 1.0
+      },
+      {
+        "word": "estate tax",
+        "weight": 1.0
+      },
+      {
+        "word": "gift tax",
+        "weight": 1.0
       }
+    ],
+    "subdomains": [
+      "regulatory",
+      "tax_law"
     ],
     "patterns": [
       "\u00a7\\s*\\d+",
@@ -647,7 +771,54 @@
       {
         "word": "biopsy",
         "weight": 1.0
+      },
+      {
+        "word": "mental health",
+        "weight": 1.0
+      },
+      {
+        "word": "anxiety",
+        "weight": 0.8
+      },
+      {
+        "word": "depression",
+        "weight": 0.8
+      },
+      {
+        "word": "psychiatry",
+        "weight": 1.0
+      },
+      {
+        "word": "psychology",
+        "weight": 0.9
+      },
+      {
+        "word": "counseling",
+        "weight": 0.9
+      },
+      {
+        "word": "trauma",
+        "weight": 0.9
+      },
+      {
+        "word": "crisis",
+        "weight": 0.8
+      },
+      {
+        "word": "suicidal",
+        "weight": 1.0
+      },
+      {
+        "word": "self-harm",
+        "weight": 1.0
+      },
+      {
+        "word": "ptsd",
+        "weight": 1.0
       }
+    ],
+    "subdomains": [
+      "mental_health"
     ],
     "patterns": [
       "\\b\\d+\\s*mg\\b",
@@ -767,10 +938,6 @@
         "weight": 1.0
       },
       {
-        "word": "sec",
-        "weight": 0.8
-      },
-      {
         "word": "ipo",
         "weight": 1.0
       },
@@ -781,7 +948,92 @@
       {
         "word": "earnings",
         "weight": 0.9
+      },
+      {
+        "word": "irs",
+        "weight": 1.0
+      },
+      {
+        "word": "deduction",
+        "weight": 0.9
+      },
+      {
+        "word": "capital gains",
+        "weight": 1.0
+      },
+      {
+        "word": "w-2",
+        "weight": 1.0
+      },
+      {
+        "word": "1099",
+        "weight": 1.0
+      },
+      {
+        "word": "filing",
+        "weight": 0.7
+      },
+      {
+        "word": "withholding",
+        "weight": 0.9
+      },
+      {
+        "word": "insurance",
+        "weight": 0.8
+      },
+      {
+        "word": "premium",
+        "weight": 0.8
+      },
+      {
+        "word": "underwriting",
+        "weight": 1.0
+      },
+      {
+        "word": "claim",
+        "weight": 0.7
+      },
+      {
+        "word": "mortgage",
+        "weight": 0.9
+      },
+      {
+        "word": "escrow",
+        "weight": 1.0
+      },
+      {
+        "word": "appraisal",
+        "weight": 0.9
+      },
+      {
+        "word": "deed",
+        "weight": 0.9
+      },
+      {
+        "word": "real estate",
+        "weight": 0.9
+      },
+      {
+        "word": "refinance",
+        "weight": 0.9
+      },
+      {
+        "word": "closing cost",
+        "weight": 1.0
+      },
+      {
+        "word": "hoa",
+        "weight": 0.8
+      },
+      {
+        "word": "actuarial",
+        "weight": 1.0
       }
+    ],
+    "subdomains": [
+      "tax",
+      "insurance",
+      "real_estate"
     ],
     "patterns": [
       "\\$[\\d,]+(\\.\\d{2})?",
@@ -848,10 +1100,6 @@
         "weight": 0.8
       },
       {
-        "word": "generate",
-        "weight": 0.6
-      },
-      {
         "word": "imagine",
         "weight": 0.8
       },
@@ -890,6 +1138,18 @@
       {
         "word": "slogan",
         "weight": 0.9
+      },
+      {
+        "word": "song",
+        "weight": 0.9
+      },
+      {
+        "word": "lyrics",
+        "weight": 1.0
+      },
+      {
+        "word": "creative writing",
+        "weight": 1.0
       }
     ],
     "patterns": []
@@ -955,10 +1215,6 @@
         "weight": 0.8
       },
       {
-        "word": "email",
-        "weight": 0.6
-      },
-      {
         "word": "slack",
         "weight": 0.8
       },
@@ -999,10 +1255,6 @@
         "weight": 0.6
       },
       {
-        "word": "tool",
-        "weight": 0.6
-      },
-      {
         "word": "agent",
         "weight": 0.9
       },
@@ -1015,16 +1267,44 @@
         "weight": 0.8
       },
       {
-        "word": "for all",
-        "weight": 0.7
-      },
-      {
         "word": "batch",
         "weight": 0.8
       },
       {
         "word": "iterate",
         "weight": 0.8
+      },
+      {
+        "word": "orchestrate",
+        "weight": 1.0
+      },
+      {
+        "word": "n8n",
+        "weight": 1.0
+      },
+      {
+        "word": "zapier",
+        "weight": 1.0
+      },
+      {
+        "word": "polling",
+        "weight": 0.8
+      },
+      {
+        "word": "event-driven",
+        "weight": 1.0
+      },
+      {
+        "word": "pub/sub",
+        "weight": 1.0
+      },
+      {
+        "word": "queue",
+        "weight": 0.7
+      },
+      {
+        "word": "every hour",
+        "weight": 0.9
       }
     ],
     "patterns": [

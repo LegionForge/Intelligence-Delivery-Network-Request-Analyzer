@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "PII detection patterns for IDN Request Analyzer",
     "note": "All patterns are case-insensitive. Matching ANY pattern sets pii_risk to the class level."
   },
@@ -83,6 +83,20 @@
         "\\b\\d+\\s*(mg|ml|mcg|units?)\\b",
         "\\b\\d+/\\d+\\s*mmhg\\b",
         "\\b(icd|cpt)[-\\s]?\\d+\\b"
+      ]
+    },
+    "mental_health": {
+      "risk_level": "critical",
+      "compliance": [
+        "HIPAA",
+        "GDPR"
+      ],
+      "patterns": [
+        "\\b(anxiety|depression|ptsd|bipolar|schizophrenia|ocd|adhd|autism)\\b",
+        "\\b(suicidal|self-harm|self harm|cutting|overdose)\\b",
+        "\\b(therapist|psychiatrist|psychologist|counselor)\\s+said\\b",
+        "\\b(mental health|psychiatric|psychological)\\s+(diagnosis|condition|disorder|treatment)\\b",
+        "\\b(on medication for|prescribed for)\\s+[\\w\\s]+(anxiety|depression|mental|mood)\\b"
       ]
     },
     "financial": {
