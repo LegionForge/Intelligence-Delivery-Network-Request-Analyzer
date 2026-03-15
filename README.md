@@ -1,4 +1,4 @@
-# idn-analyzer
+# idn-analyzer - Development on Hold see [LegionForge](https://github.com/jp-cruz/LegionForge) or https://legionforge.org
 
 > *Universal LLM Prompt Profiler — lightweight, cross-platform, offline-capable.*
 
