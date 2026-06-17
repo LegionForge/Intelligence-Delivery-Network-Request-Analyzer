@@ -2,7 +2,7 @@
                        Version 3, 19 November 2007
 
                   Copyright (C) 2026 John Paul "Jp" Cruz
-https://github.com/jp-cruz/Intelligence-Delivery-Network-Request-Analyzer
+https://github.com/LegionForge/Intelligence-Delivery-Network-Request-Analyzer
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
@@ -687,7 +687,7 @@ These terms are legally binding on all recipients of this software.
    Required attribution text:
 
        "Based on the Intelligence Delivery Network (IDN)
-        by John Paul Cruz — https://github.com/jp-cruz/Intelligence-Delivery-Network-Request-Analyzer"
+        by John Paul Cruz — https://github.com/LegionForge/Intelligence-Delivery-Network-Request-Analyzer"
 
    This requirement applies to all forms of distribution, including but
    not limited to: open-source forks, commercial products, SaaS platforms,

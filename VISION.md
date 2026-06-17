@@ -160,7 +160,7 @@ that must run on every platform, including bare-metal hardware with no OS.
 ## Relationship to the Intelligence Delivery Network
 
 `idn-analyzer` was created as the analytical foundation of the
-[Intelligence Delivery Network (IDN)](https://github.com/jp-cruz/Intelligence-Delivery-Network),
+[Intelligence Delivery Network (IDN)](https://github.com/LegionForge/Intelligence-Delivery-Network),
 a CDN-inspired system for routing LLM workloads to the optimal compute tier.
 
 IDN's core thesis is that LLM inference should work like content delivery: requests

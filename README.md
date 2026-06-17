@@ -1,11 +1,11 @@
-# idn-analyzer - Development on Hold see [LegionForge](https://github.com/jp-cruz/LegionForge) or https://legionforge.org
+# idn-analyzer - Development on Hold see [LegionForge](https://github.com/LegionForge) or https://legionforge.org
 
 > *Universal LLM Prompt Profiler — lightweight, cross-platform, offline-capable.*
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
 [![Status: Pre-Alpha](https://img.shields.io/badge/Status-Pre--Alpha-orange.svg)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
-[![Part of IDN](https://img.shields.io/badge/Part%20of-Intelligence%20Delivery%20Network-purple.svg)](https://github.com/jp-cruz/Intelligence-Delivery-Network)
+[![Part of IDN](https://img.shields.io/badge/Part%20of-Intelligence%20Delivery%20Network-purple.svg)](https://github.com/LegionForge/Intelligence-Delivery-Network)
 
 ---
 
@@ -21,7 +21,7 @@ prompt → [idn-analyzer] → routing metadata (JSON)
 ```
 
 It is the analytical foundation of the
-[Intelligence Delivery Network (IDN)](https://github.com/jp-cruz/Intelligence-Delivery-Network)
+[Intelligence Delivery Network (IDN)](https://github.com/LegionForge/Intelligence-Delivery-Network)
 — a CDN-style routing system for LLM workloads — but is designed to be **fully
 independent** and useful in any LLM application or gateway.
 
@@ -275,7 +275,7 @@ Easiest ways to contribute:
 ## Relationship to IDN
 
 `idn-analyzer` is the analytical core of the
-[Intelligence Delivery Network](https://github.com/jp-cruz/Intelligence-Delivery-Network).
+[Intelligence Delivery Network](https://github.com/LegionForge/Intelligence-Delivery-Network).
 IDN uses this library as its routing signal source. They are separate projects with
 separate versioning — `idn-analyzer` has no dependency on IDN and can be used
 independently in any LLM stack.
@@ -290,9 +290,9 @@ See [LICENSE](LICENSE) for full terms.
 Attribution required in all derivative works:
 
 > *"Based on idn-analyzer by John Paul Cruz —
-> https://github.com/jp-cruz/idn-analyzer"*
+> https://github.com/LegionForge/Intelligence-Delivery-Network-Request-Analyzer"*
 
 ---
 
-*Part of the [Intelligence Delivery Network](https://github.com/jp-cruz/Intelligence-Delivery-Network) project.*
+*Part of the [Intelligence Delivery Network](https://github.com/LegionForge/Intelligence-Delivery-Network) project.*
 *"Know what your prompt needs before you serve it."*

@@ -3,7 +3,7 @@ signals.py — Python ctypes wrapper for signals_core.so
 IDN Request Analyzer v0.1.0
 
 Copyright (C) 2026 John Paul "Jp" Cruz
-https://github.com/jp-cruz/Intelligence-Delivery-Network-Request-Analyzer
+https://github.com/LegionForge/Intelligence-Delivery-Network-Request-Analyzer
 Licensed under GNU AGPL v3 with Section 7 attribution terms.
 
 Usage:
